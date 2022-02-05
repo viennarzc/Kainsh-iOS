@@ -13,7 +13,7 @@ struct ProgressBar: View {
     var body: some View {
             Circle()
                 .fill(Color.clear)
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
                 .overlay(
                     Circle().trim(from:0, to: progress())
                         .stroke(
@@ -30,7 +30,6 @@ struct ProgressBar: View {
     func completed() -> Bool {
         return progress() == 1
     }
-
 
     func progress() -> CGFloat {
         return (CGFloat(counter) / CGFloat(countTo))

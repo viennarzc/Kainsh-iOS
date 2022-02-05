@@ -22,9 +22,9 @@ struct CookingStepsView: View {
                         Spacer()
 
                         if step.timer != 0 {
-                            TimerButtonContainer(buttonTitle: "Start Timer", timer: step.timer, tapped: {
-                                print("hehe")
-                            })
+                            CountdownView(counter: 0, countTo: step.timer * 60)
+                                .frame(width: 50, height: 50, alignment: .center)
+                            //original value is in minutes so we multiply to  60 to become seconds
                         } else {
                             /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
                         }

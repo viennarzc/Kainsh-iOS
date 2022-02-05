@@ -13,6 +13,7 @@
 		2121F5A127AE9A1E007A65B8 /* TimerButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */; };
 		2121F5A527AE9DE9007A65B8 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F5A427AE9DE9007A65B8 /* ClockView.swift */; };
 		2121F5A727AE9E45007A65B8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F5A627AE9E45007A65B8 /* ProgressBar.swift */; };
+		215177BD27AEA7B200D1FA7F /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215177BC27AEA7B200D1FA7F /* CountdownView.swift */; };
 		218C0C8127AE111A0072C744 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 218C0C8027AE111A0072C744 /* recipe.json */; };
 		218C0C8427AE154E0072C744 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C0C8327AE154E0072C744 /* Recipe.swift */; };
 		218C0C8627AE307D0072C744 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C0C8527AE307D0072C744 /* Helper.swift */; };
@@ -50,6 +51,7 @@
 		2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonContainer.swift; sourceTree = "<group>"; };
 		2121F5A427AE9DE9007A65B8 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		2121F5A627AE9E45007A65B8 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		215177BC27AEA7B200D1FA7F /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		218C0C8027AE111A0072C744 /* recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
 		218C0C8327AE154E0072C744 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		218C0C8527AE307D0072C744 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */,
 				2121F5A427AE9DE9007A65B8 /* ClockView.swift */,
+				215177BC27AEA7B200D1FA7F /* CountdownView.swift */,
 				2121F5A627AE9E45007A65B8 /* ProgressBar.swift */,
 			);
 			path = TimerView;
@@ -328,6 +331,7 @@
 				218C0C8427AE154E0072C744 /* Recipe.swift in Sources */,
 				21A77C6A27ADFEFA007DDB44 /* ContentView.swift in Sources */,
 				21A77C6827ADFEFA007DDB44 /* KainshApp.swift in Sources */,
+				215177BD27AEA7B200D1FA7F /* CountdownView.swift in Sources */,
 				2121F5A127AE9A1E007A65B8 /* TimerButtonContainer.swift in Sources */,
 				2121F59C27AE999D007A65B8 /* CookingStepsViewModel.swift in Sources */,
 				218C0C8827AE47F70072C744 /* ItemDetail.swift in Sources */,
