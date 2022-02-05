@@ -19,7 +19,7 @@ struct ContentView: View {
 
             }
             .navigationTitle("Recipes")
-            .listStyle(.sidebar)
+            .listStyle(.grouped)
             
         }
     }

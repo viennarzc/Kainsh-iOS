@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct CountdownView: View {
-@State var counter: Int = 0
+    @State var counter: Int = 0
+    
+    @Binding var isRunningTime: Bool
+    
     let timer = Timer
          .publish(every: 1, on: .main, in: .common)
          .autoconnect()
@@ -23,18 +26,25 @@ struct CountdownView: View {
                 ClockView(counter: counter, countTo: countTo)
             }
         }.onReceive(timer) { time in
+            if isRunningTime {
+                timer.upstream.autoconnect()
+            }
+            
             
             if (self.counter < self.countTo) {
                 
                 self.counter += 1
             }
+        }.onAppear {
+            timer.upstream.connect().cancel()
         }
+        
     }
 }
 
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
-            CountdownView()
+        CountdownView(isRunningTime: .constant(false))
         }
     }
 
