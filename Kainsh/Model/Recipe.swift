@@ -55,6 +55,16 @@ class RecipeDataModel: ObservableObject {
 
 
 struct Recipe: Decodable, Identifiable {
+    internal init(id: UUID = UUID(), name: String, ingredients: [Ingredient], steps: [String], timers: [Int], imageURL: String?, originalURL: String?) {
+        self.id = id
+        self.name = name
+        self.ingredients = ingredients
+        self.steps = steps
+        self.timers = timers
+        self.imageURL = imageURL
+        self.originalURL = originalURL
+    }
+    
     var id: UUID = UUID()
     
     let name: String
@@ -85,6 +95,11 @@ struct Recipe: Decodable, Identifiable {
         self.originalURL = try value.decodeIfPresent(String.self, forKey: .originalURL)
         
     }
+    
+    
+    #if DEBUG
+    static let example = Recipe(id: UUID(), name: "Test Recipe", ingredients: [Ingredient(quantity: "4 cups", name: "Test name", type: "Test type")], steps: ["test steup"], timers: [1], imageURL: nil, originalURL: nil)
+    #endif
 }
 
 struct Ingredient: Decodable {

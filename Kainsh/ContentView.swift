@@ -13,32 +13,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(model.recipes) { recipe in
-                HStack(alignment: .center, spacing: 16) {
+          
+                    ItemRow(recipe: recipe)
                     
-                    
-                    if let urlString = recipe.imageURL, let url = URL(string: urlString) {
-                        AsyncImage(url: url, scale: 0.5) { img in
-                            
-                            img.resizable()
-                                .cornerRadius(30)
-                                .frame(width: 30, height: 30)
-                            
-                        } placeholder: {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                        }
-                        
-                
-                    } else {
-                        Image(systemName: "fork.knife.circle")
-                    }
-              
-                    
-                    
-                    Text(recipe.name)
-                        .font(.subheadline)
-                        .fontWeight(.light)
-                }
+          
 
             }
             .navigationTitle("Recipes")
@@ -58,5 +36,35 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice("iPhone 13 mini")
             .previewInterfaceOrientation(.portrait)
+    }
+}
+
+struct ItemRow: View {
+    var recipe: Recipe
+    var body: some View {
+        
+        HStack(alignment: .center, spacing: 16) {
+            
+            if let urlString = recipe.imageURL, let url = URL(string: urlString) {
+                AsyncImage(url: url, scale: 0.5) { img in
+                    
+                    img.resizable()
+                        .cornerRadius(30)
+                        .frame(width: 30, height: 30)
+                    
+                } placeholder: {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                }
+                
+                
+            } else {
+                Image(systemName: "fork.knife.circle")
+            }
+            
+            Text(recipe.name)
+                .font(.subheadline)
+                .fontWeight(.light)
+        }
     }
 }
