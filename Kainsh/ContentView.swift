@@ -13,10 +13,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(model.recipes) { recipe in
-          
+                NavigationLink(destination: ItemDetail(item: recipe)) {
                     ItemRow(recipe: recipe)
-                    
-          
+                }
 
             }
             .navigationTitle("Recipes")

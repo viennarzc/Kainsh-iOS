@@ -98,11 +98,22 @@ struct Recipe: Decodable, Identifiable {
     
     
     #if DEBUG
-    static let example = Recipe(id: UUID(), name: "Test Recipe", ingredients: [Ingredient(quantity: "4 cups", name: "Test name", type: "Test type")], steps: ["test steup"], timers: [1], imageURL: nil, originalURL: nil)
+    static let example = Recipe(
+        id: UUID(),
+        name: "Test Recipe",
+        ingredients: [
+            Ingredient(quantity: "4 cups", name: "Test name", type: "Test type"),
+            Ingredient(quantity: "4 cups", name: "Test name", type: "Test type")
+        ],
+        
+        steps: ["test steup"],
+        timers: [1],
+        imageURL: "https://picsum.photos/seed/picsum/100/100",
+        originalURL: "https://picsum.photos/seed/picsum/100/100")
     #endif
 }
 
-struct Ingredient: Decodable {
+struct Ingredient: Decodable, Hashable {
     let quantity: String
     let name: String
     let type: String
