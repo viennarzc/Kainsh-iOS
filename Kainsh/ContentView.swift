@@ -20,13 +20,12 @@ struct ContentView: View {
                         AsyncImage(url: url, scale: 0.5) { img in
                             
                             img.resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(maxWidth: 30, maxHeight: 30)
                                 .cornerRadius(30)
+                                .frame(width: 30, height: 30)
                             
                         } placeholder: {
                             Circle()
-                                .frame(maxWidth: 30, maxHeight: 30)
+                                .frame(width: 30, height: 30)
                         }
                         
                 
@@ -37,7 +36,8 @@ struct ContentView: View {
                     
                     
                     Text(recipe.name)
-                        .font(.title2)
+                        .font(.subheadline)
+                        .fontWeight(.light)
                 }
 
             }
