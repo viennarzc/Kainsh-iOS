@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2121F59927AE8365007A65B8 /* CookingStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F59827AE8365007A65B8 /* CookingStepsView.swift */; };
+		2121F59C27AE999D007A65B8 /* CookingStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F59B27AE999D007A65B8 /* CookingStepsViewModel.swift */; };
+		2121F59E27AE99B0007A65B8 /* StepsCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F59D27AE99B0007A65B8 /* StepsCardViewModel.swift */; };
+		2121F5A127AE9A1E007A65B8 /* TimerButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */; };
 		218C0C8127AE111A0072C744 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 218C0C8027AE111A0072C744 /* recipe.json */; };
 		218C0C8427AE154E0072C744 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C0C8327AE154E0072C744 /* Recipe.swift */; };
 		218C0C8627AE307D0072C744 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C0C8527AE307D0072C744 /* Helper.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2121F59827AE8365007A65B8 /* CookingStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepsView.swift; sourceTree = "<group>"; };
+		2121F59B27AE999D007A65B8 /* CookingStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepsViewModel.swift; sourceTree = "<group>"; };
+		2121F59D27AE99B0007A65B8 /* StepsCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCardViewModel.swift; sourceTree = "<group>"; };
+		2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonContainer.swift; sourceTree = "<group>"; };
 		218C0C8027AE111A0072C744 /* recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
 		218C0C8327AE154E0072C744 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		218C0C8527AE307D0072C744 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -80,12 +88,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2121F59A27AE9977007A65B8 /* CookingSteps */ = {
+			isa = PBXGroup;
+			children = (
+				2121F59827AE8365007A65B8 /* CookingStepsView.swift */,
+				2121F59D27AE99B0007A65B8 /* StepsCardViewModel.swift */,
+				2121F59B27AE999D007A65B8 /* CookingStepsViewModel.swift */,
+			);
+			path = CookingSteps;
+			sourceTree = "<group>";
+		};
+		2121F59F27AE99FF007A65B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21A77C6927ADFEFA007DDB44 /* ContentView.swift */,
+				218C0C8727AE47F70072C744 /* ItemDetail.swift */,
+				2121F59A27AE9977007A65B8 /* CookingSteps */,
+				2121F5A027AE9A1E007A65B8 /* TimerButtonContainer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		218C0C8227AE15410072C744 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				218C0C8327AE154E0072C744 /* Recipe.swift */,
 				218C0C8027AE111A0072C744 /* recipe.json */,
-				218C0C8527AE307D0072C744 /* Helper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,11 +141,11 @@
 		21A77C6627ADFEFA007DDB44 /* Kainsh */ = {
 			isa = PBXGroup;
 			children = (
+				218C0C8527AE307D0072C744 /* Helper.swift */,
 				218C0C8227AE15410072C744 /* Model */,
 				21A77C9127AE0079007DDB44 /* Info.plist */,
 				21A77C6727ADFEFA007DDB44 /* KainshApp.swift */,
-				21A77C6927ADFEFA007DDB44 /* ContentView.swift */,
-				218C0C8727AE47F70072C744 /* ItemDetail.swift */,
+				2121F59F27AE99FF007A65B8 /* Views */,
 				21A77C6B27ADFEFC007DDB44 /* Assets.xcassets */,
 				21A77C6D27ADFEFC007DDB44 /* Preview Content */,
 			);
@@ -280,11 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2121F59E27AE99B0007A65B8 /* StepsCardViewModel.swift in Sources */,
 				218C0C8427AE154E0072C744 /* Recipe.swift in Sources */,
 				21A77C6A27ADFEFA007DDB44 /* ContentView.swift in Sources */,
 				21A77C6827ADFEFA007DDB44 /* KainshApp.swift in Sources */,
+				2121F5A127AE9A1E007A65B8 /* TimerButtonContainer.swift in Sources */,
+				2121F59C27AE999D007A65B8 /* CookingStepsViewModel.swift in Sources */,
 				218C0C8827AE47F70072C744 /* ItemDetail.swift in Sources */,
 				218C0C8627AE307D0072C744 /* Helper.swift in Sources */,
+				2121F59927AE8365007A65B8 /* CookingStepsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

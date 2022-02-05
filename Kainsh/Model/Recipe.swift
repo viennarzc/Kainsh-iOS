@@ -106,7 +106,7 @@ struct Recipe: Decodable, Identifiable {
             Ingredient(quantity: "4 cups", name: "Test name", type: "Test type")
         ],
         
-        steps: ["test steup"],
+        steps: ["test steup", "Test 2"],
         timers: [1],
         imageURL: "https://picsum.photos/seed/picsum/100/100",
         originalURL: "https://picsum.photos/seed/picsum/100/100")

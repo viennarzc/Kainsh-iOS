@@ -15,5 +15,11 @@ class KainshTests: XCTestCase {
         
         XCTAssertTrue(sut.recipes.count >= 1 , "Empty")
     }
+    
+    func testCookingStepsViewModel_WhenInjectingData_ShouldHaveDagta() {
+        let sut = CookingStepsViewModel(steps: ["Step 1"], timers: [20])
+        
+        XCTAssertTrue(!sut.stepsVM.isEmpty, "steps is empty")
+    }
 
 }
